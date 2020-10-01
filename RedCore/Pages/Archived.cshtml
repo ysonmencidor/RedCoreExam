@@ -1,0 +1,32 @@
+﻿@page
+@model RedCore.Pages.ArchivedModel
+@{
+    ViewData["Title"] = "Archived";
+}
+
+
+<div class="row">
+    <div class="col-8 offset-2 small">
+        <h1>Archived</h1>
+
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Date Deleted</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.movies)
+                {
+                    <tr>
+                        <td>@item.Title</td>
+                        <td>@item.Description</td>
+                        <td>@item.Date_Deleted</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
